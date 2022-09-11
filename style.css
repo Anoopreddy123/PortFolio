@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    background-color: black;
+    color: white;
+    width: 100vw;
+}
+
+.sidebar nav {
+    padding: 50px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.sidebar nav li {
+    list-style: none;
+    float: left;
+    padding: 25px;
+}
+
+.main {
+    background-color: yellow;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.infoContainer{
+    background-color: red;
+    height: 25vw;
+    width: 50vw;
+    margin: auto;
+}
+
