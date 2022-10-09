@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Open+Sans&display=swap');  /*Header */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@
 }
 
 .sidebar {
-    background-color: black;
+    background-color: rgb(90, 89, 89);
     color: white;
     width: 100vw;
 }
@@ -27,17 +29,54 @@
 }
 
 .main {
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 100vw;
     height: 100vh;
+
 }
 
+.header{
+    text-align: center;
+    padding-top: 10vh;
+    font-size: 50px;
+    font-family: 'Alkalami', serif;
+font-family: 'Open Sans', sans-serif;
+}
+.devinfo{
+     padding-left: 50px;
+     text-align: left;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+}
+
+.hello{
+font-size: 60px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.hello span{
+    font-weight: bold;
+    font-family: 'Alkalami', serif;
+font-family: 'Open Sans', sans-serif;
+}
+.about{
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.buttons button{
+    font-family: 'Open Sans', sans-serif;
+
+
+}
 
 .infoContainer{
-    background-color: red;
-    height: 25vw;
-    width: 50vw;
-    margin: auto;
-    
+    background-color: rgb(174, 169, 169); 
+    height: 50vh;
+    width: 90vw;
+    color: black;
+    display: flex;
+    margin: 20px auto;
 }
 
