@@ -17,10 +17,30 @@ export const About = () => {
           <div className="about__cards">
             <article className='about__card'>
             <BsFillAwardFill className='about__icon'/>
-              <h5>Experience </h5> 
-              <small>1 year </small>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nihil dolorum a quisquam, laborum corporis, corrupti laudantium quam omnis optio expedita eum. Quis facilis minus magni quia error reprehenderit deserunt?</p>
+              <h5>Internship - Broadridge Financial Solutiona </h5> 
+              <small> Internship </small>
+              <p>• Crafted reusable Java code to enhance our projects' quality and scalability.
+                 • Strengthened security by addressing vulnerabilities and ensuring robust defences.
+                 • Streamlined data loading through optimized PL/SQL procedures, ensuring accuracy and efficiency. 
+                 • Led software upgrades aligned with business needs, resolving issues for enhanced functionality.</p>
             </article>
+            <article className='about__card'>
+            <BsFillAwardFill className='about__icon'/>
+              <h5>Full Time - Broadridge Financial Solution </h5> 
+              <small> Junior Software Engineer </small>
+              <p>
+              • Assisted in migrating codebase and functionality from EJB to Spring, resulting in improved application structure and maintainability.
+              • Collaborated on rewriting frontend components from JSP to ReactJS, enhancing user experience and enabling modern UI features.
+              • Designed and implemented APIs that retrieve data from backend systems, enabling seamless integration with the frontend ensuring up-to-date information presentation.
+              • These APIs helped in improving data retrieval efficiency and reducing latency, resulting in a smoother user experience.
+              • Assumed responsibility for coordinating and overseeing the QA database, ensuring its proper functioning and
+                accessibility.
+              • Made necessary changes to PL/SQL procedures, improving data manipulation and retrieval capabilities.
+              • Helped in estimating and resolving the security vulnerabilities and rectifying cross-site scripting vulnerabilities
+                across the application.
+              </p>
+            </article>
+
             <article className='about__card'>
             <IoSchoolSharp className='about__icon'/>
               <h5>College </h5> 
