@@ -1,85 +1,89 @@
-.experience__container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.experience__container {
+    display: flex;
     gap: 2rem;
     margin-left: 150px;
 }
 
-.experience__frontend{
-    margin-left: 80px;
-    padding-left: 80px;
-}
-
-
-
-
-.experience__container > div{
+.experience__frontend,
+.experience__container > div {
+    flex: 1;
     background: var(--color-bg-variant);
     padding: 2.4rem 5rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    margin-bottom: 2rem;
 }
 
-.experience__container > div:hover{
+.experience__container > div:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
-   cursor: default;
+    cursor: default;
 }
 
-.experience__container > div h3{
+.experience__container > div h3 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-primary);
 }
 
-.experience__content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
+.experience__content {
+    display: flex;
+    gap: 2rem;
 }
 
-.experience__details{
+.experience__details,
+.experience__content,
+.experience__details-icon {
+    flex: 1;
+}
+
+.experience__details {
     display: flex;
     gap: 1rem;
-   
 }
 
-.experience__details-icon{
+.experience__details-icon {
     margin-top: 6px;
     color: var(--color-primary);
 }
 
-
-
-@media screen and (max-width : 1024px) {
-
-    .experience__container{
-        grid-template-columns: 1fr;
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
     }
 
-    .experience__container > div{
-        width: 80%;
+    .experience__frontend,
+    .experience__container > div {
+        width: 100%;
         padding: 2rem;
-        margin: 0 auto;
     }
 
-    .experience__content{
-        padding: 1rem;
+    .experience__content,
+    .experience__details {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .experience__container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
     }
 
+    .experience__frontend,
+    .experience__container > div {
+        width: 100%;
+        padding: 2rem;
     }
-   
-    @media screen and (max-width : 600px) {
-    
-       .experience__container{
-        gap: 1rem;
-       } 
 
-       .experience__container > div{
-       width: 100%;
-       padding: 2rem 1rem;
-       } 
-
-
+    .experience__content,
+    .experience__details {
+        flex-direction: column;
+        gap: 2rem;
     }
+}

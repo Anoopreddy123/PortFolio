@@ -1,34 +1,55 @@
-nav{
-     
-    background: rgba(0,0,0,0.3);
-    width: max-content;
-    display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2rem;
-    display: flex;
-    gap: 1rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(5px);
-}
-
-nav a{
+nav {
+        background: rgba(0, 0, 0, 0.3);
+        width: max-content;
+        padding: 0.7rem 1.7rem;
+        z-index: 2;
+        position: fixed;
+        left: 50%;
+        bottom: 2rem;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1rem;
+        border-radius: 3rem;
+        backdrop-filter: blur(5px);
+        max-width: 90vw; /* Set a maximum width to prevent full width */
+    }
+    
+    nav a {
         background: transparent;
-        padding: 0.9rem;
+        padding: 0.9rem 1.5rem;
         border-radius: 50%;
         display: flex;
         color: var(--color-light);
         font-size: 1.1rem;
-}
-
-nav a:hover{
-        background-color: rgba(0,0,0,1);
-}
-
-nav a.active{
-  background: var(--color-bg);
-  color: var(--color-white);
-}
+    }
+    
+    nav a:hover {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    
+    nav a.active {
+        background: var(--color-bg);
+        color: var(--color-white);
+    }
+    
+    @media screen and (max-width: 1024px) {
+        nav {
+            bottom: 1rem;
+            transform: none;
+            left: 0;
+            max-width: 100%; /* Make the nav bar full width for screens <= 1024px */
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        nav {
+            bottom: 0.5rem;
+            max-width: 100%; /* Make the nav bar full width for screens <= 600px */
+        }
+    
+        nav a {
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+        }
+    }
+    
