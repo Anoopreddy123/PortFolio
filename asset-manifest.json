@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.a1c910d4.css",
-    "main.js": "/PortFolio/static/js/main.b9991509.js",
-    "static/media/Kunta Anoop Reddy.pdf": "/PortFolio/static/media/Kunta Anoop Reddy.c234b5e46aead66e4899.pdf",
+    "main.js": "/PortFolio/static/js/main.e28cc08d.js",
+    "static/media/Kunta Anoop Reddy.pdf": "/PortFolio/static/media/Kunta Anoop Reddy.6ac22c4ec6618f1b4710.pdf",
     "static/media/ToDo.png": "/PortFolio/static/media/ToDo.64dc9dddab47140e7f30.png",
     "static/media/garbage.jpeg": "/PortFolio/static/media/garbage.a9e7146b508e918c342c.jpeg",
     "static/media/Image.jpg": "/PortFolio/static/media/Image.c684c4b877a9812749ab.jpg",
@@ -10,10 +10,10 @@
     "static/media/Library.png": "/PortFolio/static/media/Library.3c5f340518250bcaaa7f.png",
     "index.html": "/PortFolio/index.html",
     "main.a1c910d4.css.map": "/PortFolio/static/css/main.a1c910d4.css.map",
-    "main.b9991509.js.map": "/PortFolio/static/js/main.b9991509.js.map"
+    "main.e28cc08d.js.map": "/PortFolio/static/js/main.e28cc08d.js.map"
   },
   "entrypoints": [
     "static/css/main.a1c910d4.css",
-    "static/js/main.b9991509.js"
+    "static/js/main.e28cc08d.js"
   ]
 }
