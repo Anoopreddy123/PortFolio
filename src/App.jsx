@@ -10,15 +10,14 @@ import { Footer } from './Components/Footer/Footer';
 const App = () => {
   return (
     <div className="App">
-     <Header/>
+      <Header/>
      <Nav />
      <About/>
-     
-     
       <Experience/>
       <Projects/>
       <Contact/>
       <Footer/>
+     
     </div>
   );
 }

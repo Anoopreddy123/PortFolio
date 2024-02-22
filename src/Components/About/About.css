@@ -1,16 +1,13 @@
-.about__container{
-
+.about__container {
     display: grid;
-    grid-template-columns: 90% 50%;
-    gap: 15;
+    grid-template-columns: auto; 
+    gap: 15px;
     padding-left: 15rem;
-
 }
 
-
-.about__cards{
-    display: grid; 
-    grid-template-columns: repeat(3,1fr);
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust min and max width as needed */
     gap: 1.5rem;
 }
 
