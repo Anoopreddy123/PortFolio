@@ -5,7 +5,7 @@
 import React, { useState } from 'react';
 import './About.css';
 
-const About = () => {
+export const About = () => {
     const [expandedCard, setExpandedCard] = useState(null);
 
     const handleMouseEnter = (index) => {
@@ -74,4 +74,4 @@ const About = () => {
     );
 };
 
-export default Login;
+
