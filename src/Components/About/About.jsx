@@ -3,9 +3,9 @@
 
 
 import React, { useState } from 'react';
-import './Login.css';
+import './About.css';
 
-const Login = () => {
+const About = () => {
     const [expandedCard, setExpandedCard] = useState(null);
 
     const handleMouseEnter = (index) => {
