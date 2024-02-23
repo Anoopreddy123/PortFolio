@@ -1,7 +1,7 @@
 .about__container {
     display: grid;
     gap: 40px; 
-    padding-left: 15rem;
+    padding-left: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -45,11 +45,7 @@
     line-height: 1.5; /* Adjust line height for readability */
 }
 
-/* Remove fading effect for the last paragraph */
-.about__card p:last-child {
-    color: initial;
-    opacity: 1;
-}
+
 
 /* Optional: Add a "Read More" link for expanded view */
 .about__card.expanded {
