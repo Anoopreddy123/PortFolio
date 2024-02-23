@@ -1,37 +1,30 @@
 .about__container {
     display: grid;
-    grid-template-columns: auto; 
-    gap: 15px;
+    gap: 40px; 
     padding-left: 15rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .about__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust min and max width as needed */
-    gap: 1.5rem;
-} 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Adjust spacing as needed */
+    justify-content: space-between; /* Distribute cards evenly */
+}
 
 .about__card {
     background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem; /* Adjust padding if needed */
     text-align: center;
     flex: 1; /* Apply flex property */
-    max-width: 400px; /* Set a fixed length */
-    margin: 0 auto; /* Center the card horizontally */
+    height: 250px; /* Adjust initial height as needed */
+    overflow: hidden; /* Hide overflowing content */
 }
 
 .about__card:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
-    cursor: pointer;
-}
-
-.about__icon {
-    color: var(--color-primary);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    height: auto; /* Expand to fit content on hover */
 }
 
 .about__card h5 {
@@ -46,6 +39,29 @@
 .about__content p {
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+
+
+/* Optional: Add a "Read More" link for expanded view */
+.about__card.expanded {
+    text-align: center;
+}
+
+.about__card.expanded a {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.about__card.expanded a:hover {
+    background-color: #eee;
 }
 
 @media screen and (max-width: 1024px) {
