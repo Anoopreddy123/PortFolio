@@ -45,11 +45,11 @@ export const About = () => {
               </small>
               <p> California State University - Dominguez Hills</p>
               <p>• Fall 2023 Semester</p>
-              <p>  Courses</p>
-              <p>  Data Structures </p>
-              <p>  Design and Analysis of Algortihms</p>
-              <p> Advanced Computer Architecture</p>
-              <p> Cloud Computing</p>
+              <p>  Courses <br />
+              Data Structures <br />
+              Design and Analysis of Algortihms<br />
+             Advanced Computer Architecture<br />
+               Cloud Computing</p>
             </article>
            </div>
 
