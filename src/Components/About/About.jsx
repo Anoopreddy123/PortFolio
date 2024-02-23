@@ -68,8 +68,6 @@ export const About = () => {
                     </div>
                 </div>
             </div>
-            <p></p>
-            <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </section>
     );
 };
