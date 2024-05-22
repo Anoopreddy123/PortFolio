@@ -58,7 +58,7 @@ export const About = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <h5>College </h5> 
-                            <small> Master's in Computer Science </small>
+                            <small> Master's in Computer Scienc </small>
                             <p>  Courses <br />
               Data Structures <br />
               Design and Analysis of Algortihms<br />
