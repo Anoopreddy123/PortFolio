@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.2346e1b6.css",
-    "main.js": "/PortFolio/static/js/main.a2f71273.js",
-    "static/media/Kunta Anoop Reddy.pdf": "/PortFolio/static/media/Kunta Anoop Reddy.6ac22c4ec6618f1b4710.pdf",
+    "main.css": "/PortFolio/static/css/main.2d54071a.css",
+    "main.js": "/PortFolio/static/js/main.f227c643.js",
+    "static/media/Towy.png": "/PortFolio/static/media/Towy.b03eb793f65f2df4fdb4.png",
+    "static/media/AnoopReddy_1.pdf": "/PortFolio/static/media/AnoopReddy_1.dd80c77e7cfbde29669b.pdf",
+    "static/media/DashBoard.png": "/PortFolio/static/media/DashBoard.ba38472a9a0d0b2059cf.png",
+    "static/media/FileCloud.png": "/PortFolio/static/media/FileCloud.9a96add739c844e00298.png",
     "static/media/ToDo.png": "/PortFolio/static/media/ToDo.64dc9dddab47140e7f30.png",
     "static/media/garbage.jpeg": "/PortFolio/static/media/garbage.a9e7146b508e918c342c.jpeg",
     "static/media/Image.jpg": "/PortFolio/static/media/Image.c684c4b877a9812749ab.jpg",
+    "static/media/MetaAnalysis.png": "/PortFolio/static/media/MetaAnalysis.9fc764556ada3ecc4c63.png",
     "static/media/ResumeImg.jpeg": "/PortFolio/static/media/ResumeImg.244c238f0feabcaaf494.jpeg",
     "static/media/Library.png": "/PortFolio/static/media/Library.3c5f340518250bcaaa7f.png",
     "index.html": "/PortFolio/index.html",
-    "main.2346e1b6.css.map": "/PortFolio/static/css/main.2346e1b6.css.map",
-    "main.a2f71273.js.map": "/PortFolio/static/js/main.a2f71273.js.map"
+    "main.2d54071a.css.map": "/PortFolio/static/css/main.2d54071a.css.map",
+    "main.f227c643.js.map": "/PortFolio/static/js/main.f227c643.js.map"
   },
   "entrypoints": [
-    "static/css/main.2346e1b6.css",
-    "static/js/main.a2f71273.js"
+    "static/css/main.2d54071a.css",
+    "static/js/main.f227c643.js"
   ]
 }
