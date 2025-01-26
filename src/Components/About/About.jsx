@@ -20,7 +20,7 @@ export const experiencesData = [
     {
       id: 2,
       title: "Full Time - Broadridge",
-      shortDesc: "Junior Software Engineer",
+      shortDesc: "Member of Technical Staff",
       details: `
       •	Migrated legacy codebase to Spring Boot and ReactJS, enhancing system scalability and reducing operational costs by 40%.
       •	Optimized PL/SQL procedures, increasing transaction processing speed by 30% while ensuring secure and efficient data handling.
