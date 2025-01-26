@@ -1,110 +1,183 @@
-.about__container {
+/* Container with 3 equal columns. */
+.cards-container {
     display: grid;
-    gap: 40px; 
-    padding-left: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.about__cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 2rem;                  /* space between cards */
+    max-width: 1200px;          /* optional max width */
+    margin: 2rem auto;          /* center horizontally & vertical spacing */
+    padding: 0 1rem;            /* some horizontal padding on smaller screens */
+  
+    /* This ensures items in each row stretch to the tallest card content */
+    align-items: stretch;
+  }
+  
+  /* The card styling to unify size & appearance */
+  .card {
+    background: #1f1c2f;        /* dark background variant */
+    border: 1px solid #2a2440;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+    /* Spacing & text alignment */
+    padding: 1.5rem;
+    text-align: center;
+  
+    /* If you want them to align well for different text lengths,
+       you can use flex inside each card so the button stays at the bottom. */
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem; /* Adjust spacing as needed */
-    justify-content: flex-start; /* Align cards to the left */
-}
-
-.about__card {
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
-    border-radius: 1rem;
-    padding: 2rem; /* Adjust padding if needed */
-    text-align: center;
-    flex: 1; /* Apply flex property */
-    height: 250px; /* Adjust initial height as needed */
-    overflow: hidden; /* Hide overflowing content */
-}
-
-.about__card:hover {
-    height: auto; /* Expand to fit content on hover */
-    background: transparent;
-    border-color: var(--color-primary-variant);
+    flex-direction: column;
+    justify-content: space-between; /* ensures consistent vertical spacing */
+  }
+  
+  /* Card heading */
+  .card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #50bffd; /* accent color */
+  }
+  
+  /* Short description inside the card */
+  .card p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    flex-grow: 1; /* so it takes up remaining space if needed */
+  }
+  
+  /* "More" button */
+  .card button {
+    background: #41b3f9;
+    color: #fff;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
-}
-
-.about__card h5 {
-    font-size: 0.95rem;
-}
-
-.about__card small {
-    font-size: 0.7rem;
-    color: var(--color-light);
-}
-
-.about__content p {
-    margin: 2rem 0; /* Adjust margin for better alignment */
-    color: var(--color-light);
-    line-height: 1.5; /* Adjust line height for readability */
-}
-
-
-
-/* Optional: Add a "Read More" link for expanded view */
-.about__card.expanded {
-    text-align: center;
-}
-
-.about__card.expanded a {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border: 1px solid #333;
-    border-radius: 3px;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-}
-
-.about__card.expanded a:hover {
-    background-color: #eee;
-}
-
-@media screen and (max-width: 1024px) {
-    .about__container {
-        grid-template-columns: 1fr;
-        gap: 0;
-        padding-left: 0; /* Adjust padding for smaller screens */
+    font-size: 0.9rem;
+    margin-top: auto; /* push button to bottom if the p grows */
+    transition: background-color 0.2s;
+  }
+  
+  .card button:hover {
+    background-color: #3390c9;
+  }
+  
+  /* ~~~~~~ Modal Styling ~~~~~~ */
+  
+  /* Dark backdrop over the entire screen */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* above everything else */
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    position: relative;
+    width: 400px; /* or your preference */
+    background: #1f1c2f;
+    border: 1px solid #2a2440;
+    border-radius: 0.5rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+  
+  /* Close button in top-right corner */
+  .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #50bffd; /* accent color */
+    cursor: pointer;
+  }
+  
+  .modal-content h4 {
+    margin-top: 0;
+    color: #50bffd;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content p {
+    white-space: pre-line; /* so new lines in the details text are respected */
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* ~~~~~ Responsive handling: stack cards on small screens ~~~~~ */
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr; /* single column on narrower screens */
     }
-
-    .about__me {
-        width: 100%; /* Set width to 100% for full-width on smaller screens */
-        margin: 2rem auto 4rem;
+  
+    .modal-content {
+      width: 90%; /* smaller modal on mobile */
     }
+  }
+  
 
-    .about__cards {
-        flex-direction: column; /* Stack cards vertically on smaller screens */
-        align-items: flex-start; /* Align cards to the left */
-    }
-
-    .about__content p {
-        margin: 1rem 0; /* Adjust margin for better alignment */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .about__me {
-        width: 100%; /* Set width to 100% for full-width on smaller screens */
-        margin: 0 auto 3rem;
-    }
-
-    .about__cards {
-        gap: 1rem;
-        grid-template-columns: 1fr; /* Adjust to a single column for better mobile layout */
-    }
-
-    .about__content {
-        text-align: center;
-    }
-
-    .about__content p {
-        margin: 1.5rem 0; /* Adjust margin for better alignment */
-    }
-}
+  /* The semi-transparent overlay covering the entire viewport */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;          /* full width */
+    height: 100vh;         /* full height */
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    display: flex;
+    align-items: center;   /* vertically center .modal-content */
+    justify-content: center; /* horizontally center .modal-content */
+    z-index: 9999;         /* ensure it appears above all other elements */
+  }
+  
+  /* The dark modal box that sits in the center */
+  .modal-content {
+    position: relative;    /* so we can position the close button in the corner */
+    background: #1f1c2f;   /* match your main dark variant */
+    border: 1px solid #2a2440;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    max-width: 600px;      /* set a reasonable max width for the box */
+    width: 90%;            /* fallback for mobile, ensures it doesn’t overflow screen */
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  /* Title inside the modal */
+  .modal-content h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #50bffd; /* your accent blue */
+  }
+  
+  /* The longer text within the modal */
+  .modal-content p {
+    white-space: pre-line; /* so line breaks in your details are honored */
+    line-height: 1.4;
+  }
+  
+  /* Close button in the top-right corner of .modal-content */
+  .modal-close-btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #50bffd; /* or #41b3f9, whatever accent color */
+    cursor: pointer;
+  }
+  
+  /* Close button hover effect, optional */
+  .modal-close-btn:hover {
+    color: #3390c9;
+  }
+  

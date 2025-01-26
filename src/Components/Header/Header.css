@@ -1,64 +1,68 @@
-header {
-    height: 100vh;
-    padding: 7rem;
+
+   header {
+    /* height: 100vh; <-- remove or replace with min-height */
+    min-height: 80vh;
+    padding:  1rem; 
     overflow: hidden;
-}
-
-.header__container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+  
+  .header__container {
     text-align: center;
-    height: 100%;
-    position: relative;
-}
-
-.cta {
-    margin: 2.5rem 0; /* Adjusted for consistent spacing */
+    /* Let flex or margin auto center it if needed */
+    display: flex;               /* flex container */
+    flex-direction: column;      /* stack items vertically */
+    align-items: center;         /* center them horizontally */
+    justify-content: center;     /* center  them vertically within min-height */
+    width: 100%;
+    max-width: 600px;            /* so it’s not too wide on large screens */
+    position: relative;          /* remove if you don’t need absolute children anymore */
+    margin: 0 auto;             /* center the container if there's extra space */
+  }
+  
+  /* The CTA row - keep it centered and spaced */
+  .cta {
+    margin: 2.5rem 0;
     display: flex;
     gap: 1.2rem;
     justify-content: center;
-}
-
-.header__socials {
+  }
+  
+  /* Social icons row; can keep them near the top if you want absolute positioning, 
+     but let's do a simple flow approach for mobile */
+  .header__socials {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    position: absolute;
-    left: 50%; /* Centering horizontally */
-    transform: translateX(-50%); /* Centering horizontally */
-    font-size: 2rem; /* Adjusted to use rem unit for better responsiveness */
-}
+    font-size: 2rem;
+    margin-bottom: 1.5rem; /* space under the social row */
+  }
+  
 
-.me {
-    margin-top: 50px;
-    width: 100%; /* Adjusted width for better responsiveness */
-    max-width: 22rem; /* Added max-width to control the image size */
-    height: auto; /* Allowing the height to adjust proportionally */
-    position: absolute;
-    left: 50%; /* Centering horizontally */
-    transform: translateX(-50%); /* Centering horizontally */
-    border-radius: 12rem 12rem 0 0;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
-}
+  .me {
+    margin-top: 2rem;
+    width: 100%;         /* let it fill container’s width if narrower than max-width */
+    max-width: 16rem;    /* control maximum image size */
+    height: auto;
 
-.header__socials::after {
-    content: " ";
-    width: 1px;
-    height: 2rem;
-}
-
-@media screen and (max-width: 1024px) {
+  }
+  
+  .me img {
+    width: 100%;
+    display: block;
+    border-radius: inherit;
+  }
+  
+  /* Example: if you still want the social icons hidden on small screens */
+  @media screen and (max-width: 600px) {
+    .header__socials {
+      display: none;
+    }
     header {
-        height: 68vh;
+      min-height: auto;  /* let the content define the height on small screens */
     }
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        height: 100vh;
-    }
-    .header__socials,
-    .scroll_down {
-        display: none;
-    }
-}
+  }
+  

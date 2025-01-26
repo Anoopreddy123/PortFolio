@@ -1,51 +1,110 @@
-.portfolio__container {
+/* Base styling for the section heading */
+.portfolio {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .portfolio h5 {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .portfolio h2 {
+    margin: 1rem 0 2rem;
+    color: var(--color-primary);
+  }
+  
+  /* ~~~ Wrapper for all categories ~~~ */
+  .portfolio__categories {
+    /* 
+      If you want each category block to be stacked with spacing,
+      you can do display: flex or block. We'll just keep them stacked. 
+    */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* space between each category */
+    max-width: 1200px; /* optional: to keep content narrower */
+    margin: 0 auto;    /* center horizontally */
+    padding: 0 1.5rem; /* horizontal padding for smaller screens */
+  }
+  
+  /* ~~~ Each category block ~~~ */
+  .portfolio__category h3 {
+    /* style for subheading above the projects grid */
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  /* ~~~ Grid container for the projects in each category ~~~ */
+  .portfolio__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
-    margin-left: 100px;
-}
-
-.portfolio_item {
+    /* 
+      Remove the margin-left: 100px that you originally had, so it can go full width.
+      We'll rely on max-width, auto margin, etc. above. 
+    */
+  }
+  
+  /* ~~~ Each project item (card) ~~~ */
+  .portfolio_item {
     background: var(--color-bg-variant);
     padding: 1.3rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
-}
-
-.portfolio_item:hover {
+    text-align: left; /* optional: so the text is left-aligned */
+  }
+  
+  .portfolio_item:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
-}
-
-.portfolio__item-image {
+  }
+  
+  .portfolio__item-image {
     border-radius: 1.5rem;
     overflow: hidden;
-}
-
-.portfolio_item h3 {
-    margin: 1.2rem 0 2rem;
-}
-
-.portfolio__item-cta {
+    text-align: center;
+  }
+  
+  .portfolio_item h3 {
+    margin: 1.2rem 0 1rem; 
+    color: #fff; /* or your desired text color */
+  }
+  
+  .portfolio__item-cta {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
     padding-bottom: 25px;
-}
-
-@media screen and (max-width: 1024px) {
+  }
+  
+  .portfolio__item-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  
+  /* ~~~ Responsive breakpoints ~~~ */
+  @media screen and (max-width: 1024px) {
     .portfolio__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-        margin-left: 20px; /* Adjusted margin for smaller screens */
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      /* margin-left: 20px;  We remove this since we want full width. */
     }
-}
-
-@media screen and (max-width: 600px) {
+  }
+  
+  @media screen and (max-width: 600px) {
     .portfolio__container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 10px; /* Adjusted margin for smaller screens */
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      /* margin-left: 10px;  Remove also. */
     }
-}
+  }
+  

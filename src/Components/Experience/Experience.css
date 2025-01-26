@@ -1,89 +1,89 @@
-.experience__container {
-    display: flex;
+/* Basic section styling */
+#skills {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  #skills h5 {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #skills h2 {
+    margin: 0.5rem 0 2rem;
+    color: var(--color-primary);
+  }
+  
+  /* ~~~ The main container that spreads categories across the full width ~~~ */
+  .skills__container {
+    /* This creates up to 4 columns across, or fewer if the screen is smaller */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-left: 150px;
-}
-
-.experience__frontend,
-.experience__container > div {
-    flex: 1;
+    max-width: 1200px; /* optional: to stop it from going too wide */
+    margin: 0 auto;    /* center horizontally */
+    padding: 0 1.5rem; /* horizontal padding for small screens */
+  }
+  
+  /* Each skill category is like a "card" or column */
+  .skills__category {
     background: var(--color-bg-variant);
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
     border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1.5rem;
     transition: var(--transition);
-    margin-bottom: 2rem;
-}
-
-.experience__container > div:hover {
+    text-align: left; /* so the category title aligns left if you prefer */
+  }
+  
+  .skills__category:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
-    cursor: default;
-}
-
-.experience__container > div h3 {
-    text-align: center;
-    margin-bottom: 2rem;
+  }
+  
+  /* Category title */
+  .skills__category h3 {
+    margin-bottom: 1rem;
     color: var(--color-primary);
-}
-
-.experience__content {
+    text-align: center; /* center the category heading if you like */
+  }
+  
+  /* The container of skill items */
+  .skills__list {
+    display: grid;
+    row-gap: 1rem; /* spacing between skill items */
+  }
+  
+  /* Each skill item row (icon + skill name) */
+  .skills__item {
     display: flex;
-    gap: 2rem;
-}
-
-.experience__details,
-.experience__content,
-.experience__details-icon {
-    flex: 1;
-}
-
-.experience__details {
-    display: flex;
-    gap: 1rem;
-}
-
-.experience__details-icon {
-    margin-top: 6px;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* The check icon styling */
+  .skills__icon {
     color: var(--color-primary);
-}
-
-@media screen and (max-width: 1024px) {
-    .experience__container {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
+    font-size: 1.2rem;
+  }
+  
+  /* The skill text */
+  .skills__item h4 {
+    font-size: 1rem;
+    color: #fff; /* or your chosen text color */
+    margin: 0;
+  }
+  
+  /* RESPONSIVE TWEAKS: If you want even more control on very small screens */
+  @media screen and (max-width: 600px) {
+    .skills__container {
+      gap: 1rem; /* smaller gap if needed */
     }
-
-    .experience__frontend,
-    .experience__container > div {
-        width: 100%;
-        padding: 2rem;
+  
+    .skills__category {
+      padding: 1rem;
+      border-radius: 0.5rem;
     }
-
-    .experience__content,
-    .experience__details {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .experience__container {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-
-    .experience__frontend,
-    .experience__container > div {
-        width: 100%;
-        padding: 2rem;
-    }
-
-    .experience__content,
-    .experience__details {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
+  }
+  
