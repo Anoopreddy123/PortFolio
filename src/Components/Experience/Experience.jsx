@@ -55,7 +55,7 @@ const SKILL_CATEGORIES = [
 
 export const Experience = () => {
   return (
-    <section id="skills">
+    <section id="experience">
       <h5>Skills</h5>
       <h2>My Experience</h2>
 

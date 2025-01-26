@@ -97,7 +97,7 @@ const PROJECT_CATEGORIES = [
 
 export const Projects = () => {
   return (
-    <section className="portfolio">
+    <section className="projects">
       <h5>My Recent Projects</h5>
       <h2>Portfolio</h2>
 
