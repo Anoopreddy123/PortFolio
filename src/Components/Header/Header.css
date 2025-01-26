@@ -58,9 +58,7 @@
   
   /* Example: if you still want the social icons hidden on small screens */
   @media screen and (max-width: 600px) {
-    .header__socials {
-      display: none;
-    }
+   
     header {
       min-height: auto;  /* let the content define the height on small screens */
     }
