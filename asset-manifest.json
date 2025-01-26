@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.2d54071a.css",
+    "main.css": "/PortFolio/static/css/main.7bc13d4a.css",
     "main.js": "/PortFolio/static/js/main.f227c643.js",
     "static/media/Towy.png": "/PortFolio/static/media/Towy.b03eb793f65f2df4fdb4.png",
     "static/media/AnoopReddy_1.pdf": "/PortFolio/static/media/AnoopReddy_1.dd80c77e7cfbde29669b.pdf",
@@ -13,11 +13,11 @@
     "static/media/ResumeImg.jpeg": "/PortFolio/static/media/ResumeImg.244c238f0feabcaaf494.jpeg",
     "static/media/Library.png": "/PortFolio/static/media/Library.3c5f340518250bcaaa7f.png",
     "index.html": "/PortFolio/index.html",
-    "main.2d54071a.css.map": "/PortFolio/static/css/main.2d54071a.css.map",
+    "main.7bc13d4a.css.map": "/PortFolio/static/css/main.7bc13d4a.css.map",
     "main.f227c643.js.map": "/PortFolio/static/js/main.f227c643.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d54071a.css",
+    "static/css/main.7bc13d4a.css",
     "static/js/main.f227c643.js"
   ]
 }
